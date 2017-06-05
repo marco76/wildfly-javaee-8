@@ -2,7 +2,7 @@
 
 ## Goal
 
-The goal of this docker image is to build a WildFly version that supports some features of Java EE 8.
+The goal is to build an unofficial version of WildFly that supports some features of Java EE 8.
 This version allows the developers to test the new JSRs implementations without waiting the release of a new official version of WildFly.
 
 This WildFly version is based on the release 10.1.0.Final and it is used to deploy the demo: <http://javademo.io>
@@ -22,7 +22,7 @@ The following JSRs can be integrated directly in your application (with some res
 
 ## Patch WildFly using Docker
 
-We use a docker container to build the patched wildfly version and copy it to our system.
+We use a docker image to build the patched WildFly version and copy it to our system.
 If you don't want to use docker you can simply execute the commands that you find in the Dockerfile.
 
 The commands have to be executed in the directory containing the Dockerfile. A new WildFly version will be created the current directory.
@@ -40,4 +40,12 @@ Clean up
 - ```docker rmi javaee/wildfly-javaee8 -f```
 - ```docker rm -f wildfly-javaee8```
 
-<a name="1">[1]</a>: A replacement of the jboss-classfilewriter version delivered with WildFly is required. [Soteria Issue 21.](<https://github.com/javaee-security-spec/soteria/issues/21>)
+## Built version
+A build version can be found here : https://s3.eu-central-1.amazonaws.com/io.javademo/wildfly-10.1.0.Patched.tar.gz
+
+## Extend WildFly with your own libraries
+In this excellent article you can find more information about how to create patches and extend WildFly with your own libraries.
+http://in.relation.to/2017/05/29/creating-patches-for-wildfly/
+
+## Notes
+<a name="1">[1]</a>: An update of the jboss-classfilewriter version delivered with WildFly is required. [Soteria Issue 21.](<https://github.com/javaee-security-spec/soteria/issues/21>)
