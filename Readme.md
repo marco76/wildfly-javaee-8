@@ -49,3 +49,5 @@ http://in.relation.to/2017/05/29/creating-patches-for-wildfly/
 
 ## Notes
 <a name="1">[1]</a>: An update of the jboss-classfilewriter version delivered with WildFly is required. [Soteria Issue 21.](<https://github.com/javaee-security-spec/soteria/issues/21>)
+
+You can find the classfilewriter here: [wildfly]/modules/system/layers/base/org/jboss/classfilewriter/main
